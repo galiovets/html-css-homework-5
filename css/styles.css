@@ -335,7 +335,7 @@ footer .logo.studio {
 .proccess.text {
   font-weight: 700;
   font-size: 14px;
-  line-height: 1.14px;
+  line-height: 1.14;
   text-align: center;
   text-transform: uppercase;
 
@@ -343,7 +343,11 @@ footer .logo.studio {
   left: 0;
   bottom: 0;
   width: 100%;
-  padding: 27px 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 15px;
+  padding-right: 15px;
 
   color: var(--primary-white-color);
   background-color: rgba(47, 48, 58, 0.8);
@@ -588,17 +592,23 @@ footer .logo.studio {
   top: 0;
   left: 0;
   width: 100%;
-  transform: translateY(100%);
-  padding: 63px 24px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 24px;
+  padding-right: 24px;
   color: var(--primary-white-color);
   background-color: rgba(33, 150, 243, 0.9);
   opacity: 0;
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateY(100%);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .work.link:hover .slide-text,
 .work.link:focus .slide-text {
   transform: translateY(0);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   opacity: 1;
 }
 
